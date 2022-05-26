@@ -1,8 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faFilter } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faFilter, faBars } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({showRightSide, setShowRightSide}) => {
+    const changeStateRightSide = (e) => {
+        e.preventDefault();
+        setShowRightSide(!showRightSide);
+    }
+
     return(
         <div className="flex w-full">
             <div className="flex flex-row w-full justify-between items-center">
@@ -18,6 +23,7 @@ const Header = () => {
                     </div>
                     <FontAwesomeIcon icon={faFilter} className='text-sm lg:text-xl text-gray-400' />
                 </div>
+                <FontAwesomeIcon icon={faBars} className='text-white text-xl lg:hidden' onClick={changeStateRightSide} />
             </div>
         </div>
     )

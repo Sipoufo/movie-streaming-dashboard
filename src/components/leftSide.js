@@ -62,7 +62,7 @@ const LeftSide = () => {
                             <label className="font-medium hidden sm:flex">Completed</label>
                         </a>
                     </div>
-                    <div className="flex flex-col w-full gap-5">
+                    <div className="flex flex-col w-full gap-5 mb-5">
                         <label className="font-bold text-gray-500">Library</label>
                         <a href="/" className="flex flex-row gap-4 text-white">
                             <FontAwesomeIcon icon={faClock}/>
